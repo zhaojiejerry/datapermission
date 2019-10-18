@@ -15,4 +15,6 @@ public class TableCondition {
 
     private  String tableName;
 
+    private  Integer roleId;
+
 }

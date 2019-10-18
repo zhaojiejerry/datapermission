@@ -41,7 +41,7 @@ public class MyInterceptor implements Interceptor {
         //获得方法类型
         SqlCommandType sqlCommandType = mappedStatement.getSqlCommandType();
         System.out.println(sqlCommandType);
-        if ("com.data.permission.dao.ApplicationDAO.getList".equals(id)) {
+        if (("com.data.permission.dao.ApplicationDAO.getList").equals(id)) {
             //增强sql代码块
             if ("SELECT".equals(sqlCommandType.name())) {
                 //如果是select就将sql转成SELECT对象

@@ -2,6 +2,7 @@ package com.data.permission.dao;
 
 import com.data.permission.entity.TableCondition;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,5 +14,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface TableDAO {
-    List<TableCondition> getTableConditionByTableName(String tableName);
+    List<TableCondition> getTableConditionByTableName(String tableName, @Param("list") List<String> list);
 }

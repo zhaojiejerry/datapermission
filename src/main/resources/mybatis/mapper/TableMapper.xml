@@ -7,9 +7,13 @@
         <result column="operator" jdbcType="CHAR" property="operator" />
         <result column="field_name" jdbcType="CHAR" property="fieldName" />
         <result column="field_value" jdbcType="CHAR" property="fieldValue"/>
+        <result column="role_id" property="roleId"/>
     </resultMap>
     <!--查询-->
     <select id="getTableConditionByTableName" resultMap="BaseResultMap">
-       select * from table_condition where table_name=#{tableName}
+       select * from table_condition where table_name=#{tableName} and role_id  in
+        <foreach collection="list" index="index" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
     </select>
 </mapper>
