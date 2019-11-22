@@ -1,6 +1,5 @@
-package com.lunz.permission.strategy.rules;
-
-import com.lunz.permission.strategy.Strategy;
+package com.jerry.data.permission.strategy.rules;
+import com.jerry.data.permission.strategy.Strategy;
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.operators.relational.GreaterThan;
 

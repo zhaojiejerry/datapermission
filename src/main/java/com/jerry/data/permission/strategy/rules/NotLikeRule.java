@@ -1,6 +1,6 @@
-package com.lunz.permission.strategy.rules;
+package com.jerry.data.permission.strategy.rules;
 
-import com.lunz.permission.strategy.Strategy;
+import com.jerry.data.permission.strategy.Strategy;
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.operators.relational.LikeExpression;
 

@@ -1,7 +1,8 @@
-package com.lunz.permission.strategy.context;
+package com.jerry.data.permission.strategy.context;
 
-import com.lunz.permission.strategy.Strategy;
-import com.lunz.permission.strategy.rules.*;
+
+import com.jerry.data.permission.strategy.Strategy;
+import com.jerry.data.permission.strategy.rules.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
  */
 public class OperateContext   {
 
-    public static Map<String,Strategy>  map = new HashMap<String,Strategy>();
+    public static Map<String, Strategy> map = new HashMap<String,Strategy>();
 
     static {
 
