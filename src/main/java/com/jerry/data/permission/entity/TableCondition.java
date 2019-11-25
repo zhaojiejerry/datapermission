@@ -24,5 +24,17 @@ public class TableCondition {
 
     private  String enhancedType;
 
+    public TableCondition(String id, String operator, String fieldName, String fieldValue, String tableName, Integer roleId, String enhancedType) {
+        this.id = id;
+        this.operator = operator;
+        this.fieldName = fieldName;
+        this.fieldValue = fieldValue;
+        this.tableName = tableName;
+        this.roleId = roleId;
+        this.enhancedType = enhancedType;
+    }
 
+    public TableCondition() {
+
+    }
 }

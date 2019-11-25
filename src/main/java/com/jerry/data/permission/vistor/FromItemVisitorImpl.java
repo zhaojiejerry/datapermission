@@ -56,19 +56,25 @@ public class FromItemVisitorImpl implements FromItemVisitor {
                     }
 
                     try {
-                        Strategy strategy = OperateContext.getStrategy(tableCondition.getOperator());
-                        Expression operator = strategy.getOperator(tableCondition.getOperator(), expressions);
                     if (this.enhancedCondition != null) {
                         if (tableCondition.getEnhancedType().equalsIgnoreCase("or")) {
+                            Strategy strategy = OperateContext.getStrategy(tableCondition.getOperator());
+                            Expression operator = strategy.getOperator(tableCondition.getOperator(), expressions);
                             enhancedCondition = new OrExpression(enhancedCondition, operator);
                         }
                         if (tableCondition.getEnhancedType().equalsIgnoreCase("and")) {
+                            Strategy strategy = OperateContext.getStrategy(tableCondition.getOperator());
+                            Expression operator = strategy.getOperator(tableCondition.getOperator(), expressions);
                             enhancedCondition = new AndExpression(enhancedCondition, operator);
                         }
                         if (tableCondition.getEnhancedType().equalsIgnoreCase("not")) {
+                            Strategy strategy = OperateContext.getStrategy(tableCondition.getOperator());
+                            Expression operator = strategy.getOperator(tableCondition.getOperator(), expressions);
                             enhancedCondition = new NotExpression(enhancedCondition);
                         }
                     } else {
+                        Strategy strategy = OperateContext.getStrategy(tableCondition.getOperator());
+                        Expression operator = strategy.getOperator(tableCondition.getOperator(), expressions);
                         enhancedCondition = operator;
                     }
                     } catch (Exception e) {
